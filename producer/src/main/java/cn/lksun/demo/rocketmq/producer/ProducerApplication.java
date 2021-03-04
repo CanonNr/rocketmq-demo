@@ -1,4 +1,4 @@
-package cn.lksun.demo.roccket.producer;
+package cn.lksun.demo.rocketmq.producer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

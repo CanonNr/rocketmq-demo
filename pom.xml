@@ -17,7 +17,9 @@
 
     <modules>
         <module>producer</module>
+        <module>consumer</module>
     </modules>
+
     <properties>
         <java.version>1.8</java.version>
         <spring.version>2.4.3</spring.version>

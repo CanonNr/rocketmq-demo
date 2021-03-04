@@ -1,4 +1,4 @@
-package cn.lksun.demo.roccket.producer;
+package cn.lksun.demo.rocketmq.producer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
