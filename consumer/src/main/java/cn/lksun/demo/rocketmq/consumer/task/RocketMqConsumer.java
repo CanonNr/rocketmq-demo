@@ -26,8 +26,9 @@ public class RocketMqConsumer implements RocketMQListener<MessageExt>,RocketMQPu
 
     }
 
-    // 设置重试次数进入死信队列,默认16
+
     public void prepareStart(DefaultMQPushConsumer consumer) {
+        // 设置重试次数进入死信队列,默认16
         consumer.setMaxReconsumeTimes(2);
     }
 
