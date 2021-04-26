@@ -2,5 +2,5 @@ server:
   port: 15502
 rocketmq:
   name-server: main.local:9876
-  consumer:
-    group: my-group
+#  consumer:
+#    group: my-group

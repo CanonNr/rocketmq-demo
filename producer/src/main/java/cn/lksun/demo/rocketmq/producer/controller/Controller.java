@@ -1,13 +1,12 @@
 package cn.lksun.demo.rocketmq.producer.controller;
 
 import cn.lksun.demo.rocketmq.producer.service.SendService01;
+import cn.lksun.demo.rocketmq.producer.service.SendService02;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.exception.MQClientException;
-import org.apache.rocketmq.client.producer.*;
 import org.apache.rocketmq.common.message.MessageConst;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.messaging.Message;
-
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +21,9 @@ public class Controller {
 
     @Resource
     SendService01 sendService01;
+
+    @Resource
+    SendService02 sendService02;
 
     @GetMapping("/0")
     public String test0(String message){
@@ -52,6 +54,14 @@ public class Controller {
     public String test1(String message) throws MQClientException {
 
         if (sendService01.send(message)){
+            return "ok";
+        }
+        return "error";
+    }
+    @GetMapping("/1-1")
+    public String test11(String message) throws MQClientException {
+
+        if (sendService02.send(message)){
             return "ok";
         }
         return "error";
