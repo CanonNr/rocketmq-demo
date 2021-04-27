@@ -19,6 +19,7 @@ public class SendService01 {
 
     public boolean send(String s){
         Message<String> message = MessageBuilder.withPayload(s).build();
+        // 事务消息
         rocketMQTemplate.sendMessageInTransaction("test-topic", message, null);
         return true;
     }
