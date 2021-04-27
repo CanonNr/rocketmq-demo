@@ -1,6 +1,6 @@
 package cn.lksun.demo.rocketmq.producer.controller;
 
-import cn.lksun.demo.rocketmq.producer.service.SendService01;
+//import cn.lksun.demo.rocketmq.producer.service.SendService01;
 import cn.lksun.demo.rocketmq.producer.service.SendService02;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.exception.MQClientException;
@@ -19,8 +19,8 @@ public class Controller {
     @Resource
     RocketMQTemplate rocketMQTemplate;
 
-    @Resource
-    SendService01 sendService01;
+//    @Resource
+//    SendService01 sendService01;
 
     @Resource
     SendService02 sendService02;
@@ -52,11 +52,11 @@ public class Controller {
 
     @GetMapping("/1")
     public String test1(String message) throws MQClientException {
-
-        if (sendService01.send(message)){
+//
+//        if (sendService01.send(message)){
             return "ok";
-        }
-        return "error";
+//        }
+//        return "error";
     }
     @GetMapping("/1-1")
     public String test11(String message) throws MQClientException {

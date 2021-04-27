@@ -7,11 +7,11 @@ import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.springframework.stereotype.Component;
 
 @Slf4j
-@Component
-@RocketMQMessageListener(
-        topic = "target",
-        consumerGroup = "target-service"
-)
+//@Component
+//@RocketMQMessageListener(
+//        topic = "target",
+//        consumerGroup = "target-service"
+//)
 public class TargetConsumer2 implements RocketMQListener<MessageExt> {
     public void onMessage(MessageExt ext) {
         String msg = new String(ext.getBody());
